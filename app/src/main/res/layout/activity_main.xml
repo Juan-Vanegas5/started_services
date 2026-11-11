@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="co.edu.unipiloto.joke.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/question"
+        android:id="@+id/button"
+        android:onClick="onClick"/>
+
+    <!-- Funcionalidad del proyecto: notificaciones académicas -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Profesor: calificar taller o parcial"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/etActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Actividad (ej. Taller 2, Primer parcial)"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nota (0.0 - 5.0)"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnCalificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Publicar calificación (notificar al estudiante)"
+        android:onClick="onClickCalificar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Estudiante: entregar tarea"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/etTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la tarea"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btnCompletarTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marcar tarea como completada (notificar al profesor)"
+        android:onClick="onClickCompletarTarea"/>
+
+</LinearLayout>
